@@ -14,6 +14,8 @@ body {
     padding: 20px;
     border: 1px solid #ccc;
     background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
 .container h1 {
@@ -34,6 +36,7 @@ body {
     border: none;
     background-color: #80163E;
     color: white;
+    text-shadow: 1px 1px 2px black;
 }
 
 .button:hover {
