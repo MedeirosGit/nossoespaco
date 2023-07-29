@@ -10,15 +10,13 @@
 </head>
 
 <body>
-    <main>
-        <div class="container">
-            <h1>Log-in</h1>
-            <form id="login-form">
-                <input type="text" id="login" class="input" placeholder="Digite o seu nome" required>
-                <input type="password" id="senha" class="input" placeholder="Digite a nossa senha" required>
-                <input type="submit" id="entrar" class="button" value="Entrar">
-            </form>
-        </div>
+    <main class="container">
+        <h1>Log-in</h1>
+        <form id="login-form">
+            <input type="text" id="login" class="input" placeholder="Digite o seu nome" required>
+            <input type="password" id="senha" class="input" placeholder="Digite a nossa senha" required>
+            <input type="submit" id="entrar" class="button" value="Entrar">
+        </form>
     </main>
 </body>
 <script>
@@ -37,6 +35,9 @@
             alert("Login ou senha inválidos!");
         }
     });
+    var h1 = document.querySelector("h1"); // seleciona o elemento h1
+h1.textContent = "Bem-vind" + (loginValue == "Wendell" ? "o" : "a") + ", " + loginValue + "!"; // muda o texto do h1
+
 </script>
 
 </html>
