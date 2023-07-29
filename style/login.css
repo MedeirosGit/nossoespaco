@@ -12,7 +12,6 @@ body {
     width: 300px;
     margin: 25vh auto;
     padding: 20px;
-    border: 1px solid #ccc;
     background-color: #fff;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -26,7 +25,7 @@ body {
     width: 278.4px;
     padding: 10px;
     margin: 10px auto;
-    border: 1px solid #ccc;
+    border: 1px solid lightgrey;
 }
 
 .button {
@@ -37,9 +36,11 @@ body {
     background-color: #80163E;
     color: white;
     text-shadow: 1px 1px 2px black;
+    transition: 200ms;
 }
 
 .button:hover {
     background-color: #FF78AC;
     cursor: pointer;
+    transition: 200ms;
 }
