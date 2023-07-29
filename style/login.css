@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(to bottom, #FF78AC, #80163E);
+    height: 73.9vh;
+    width: 99vw;
+}
+
+.container {
+    text-align: center;
+    width: 300px;
+    margin: 25vh auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.input {
+    width: 278.4px;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+}
+
+.button {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    background-color: #80163E;
+    color: white;
+}
+
+.button:hover {
+    background-color: #FF78AC;
+    cursor: pointer;
+}
