@@ -39,18 +39,11 @@ button {
     padding: 20px 50px;
 }
 
-button a {
-    display: block;
-    padding: 20px 50px;
-    text-decoration: none;
-    text-shadow: 1px 1px 2px red;
-    color: white;
-    text-shadow: 1px 1px 2px black;
-}
-
 .botaosim {
     background-color: green;
     cursor: pointer;
+    color: white;
+    text-shadow: 1px 1px 2px black;
 }
 
 .botaosim:hover {
