@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acesso Restrito</title>
-    <link rel="shortcut icon" href="../favicon/cadeado.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style/login.css">
-</head>
+    <link
+      rel="shortcut icon"
+      href="../favicon/cadeado.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../style/login.css" />
+  </head>
 
-<body>
+  <body>
     <main class="container">
-        <h1>Log-in</h1>
-        <form id="login-form">
-            <input type="text" id="login" class="input" placeholder="Digite o seu nome" required>
-            <input type="password" id="senha" class="input" placeholder="Digite a nossa senha" required>
-            <input type="submit" id="entrar" class="button" value="Entrar">
-        </form>
+      <h1>Log-in</h1>
+      <form id="login-form">
+        <div class="input-container">
+          <label for="login" class="input-label">Nome:</label>
+          <input
+            type="text"
+            id="login"
+            class="input"
+            placeholder="Digite o seu nome"
+            required
+          />
+        </div>
+        <div class="input-container">
+          <label for="senha" class="input-label">Senha:</label>
+          <input
+            type="password"
+            id="senha"
+            class="input"
+            placeholder="Digite a nossa senha"
+            required
+          />
+        </div>
+        <input type="submit" id="entrar" class="button" value="Entrar" />
+      </form>
     </main>
-</body>
-<script>
-    var loginForm = document.getElementById("login-form");
-    var login = document.getElementById("login");
-    var senha = document.getElementById("senha");
-    var entrar = document.getElementById("entrar");
-
-    loginForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        var loginValue = login.value;
-        var senhaValue = senha.value;
-        if ((loginValue == "Wendell" || loginValue == "Hellen") && senhaValue == "2410") {
-            window.location.href = "pagina-inicial.html";
-        } else {
-            alert("Login ou senha inválidos!");
-        }
-    });
-</script>
-
+    <script src="../js/login.js"></script>
+  </body>
 </html>
