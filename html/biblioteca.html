@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +7,23 @@
     <link rel="shortcut icon" href="../favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/pagina-inicial.css">
 </head>
-
 <body>
     <header>
         <h1><a href="pagina-inicial.html">Nossos Momentos</a></h1>
+        <picture class="burguer"
+          ><img
+            src="../imagem/outline_menu_black_24dp.png"
+            alt="menu"
+            onclick="mostrarMenu()"
+        /></picture>
         <menu>
-            <nav>
-                <p><a href="biblioteca.html">Nossa Biblioteca</a></p>
-                <p><a href="cinema.html">Nosso Cinema</a></p>
-                <p><a href="galeria.html">Nossa Galeria</a></p>
-            </nav>
+          <nav class="itens">
+            <p><a href="biblioteca.html">Nossa Biblioteca</a></p>
+            <p><a href="cinema.html">Nosso Cinema</a></p>
+            <p><a href="galeria.html">Nossa Galeria</a></p>
+          </nav>
         </menu>
-    </header>
+      </header>
     <main>
         <h1>As Vantagens de Ser Invisível</h1>
         <h2>Hellen</h2>
@@ -81,5 +85,5 @@
         <p>Site criado pelo <strong>Amor da Sua Vida</strong></p>
     </footer>
 </body>
-
+<script src="../js/pagina-inicial.js"></script>
 </html>
