@@ -1,54 +1,84 @@
 @charset "UTF-8";
 
+:root {
+  --color-primary: #80163e;
+  --color-secondary: #ff78ac;
+  --color-success: #22c55e;
+  --color-success-hover: #84cc16;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --shadow-sm: 1px 1px 2px rgba(0, 0, 0, 1);
+  --transition-fast: 200ms;
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background-image: linear-gradient(to bottom, darkred, red);
-  height: 100vh;
+  background-image: linear-gradient(to bottom, #8b0000, #ff0000);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-h1,
-#contador {
-  color: white;
-  text-shadow: 1px 1px 2px black;
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.question-title,
+.response-message {
+  color: var(--color-white);
+  text-shadow: var(--shadow-sm);
   text-align: center;
 }
 
-#titulo {
-  margin-bottom: 20px;
+.question-title {
+  margin-bottom: 30px;
+  font-size: 1.8em;
 }
 
-section {
-  text-align: center;
+.response-message {
+  margin-top: 15px;
+  font-size: 1.2em;
+  min-height: 1.5em;
 }
 
-button {
-  margin: 0 10px;
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button {
   border-radius: 10px;
-  border: 2px solid black;
-  box-sizing: border-box;
+  border: 2px solid var(--color-black);
   padding: 20px 50px;
-}
-
-.botaosim {
-  background-color: green;
-  color: white;
-  text-shadow: 1px 1px 2px black;
-  transition: background-color 200ms;
-}
-
-.botaosim:hover {
-  background-color: greenyellow;
+  font-size: 1em;
   cursor: pointer;
+  transition: all var(--transition-fast) ease;
 }
 
-.botaonao:hover {
+.button--yes {
+  background-color: var(--color-success);
+  color: var(--color-white);
+  text-shadow: var(--shadow-sm);
+}
+
+.button--yes:hover {
+  background-color: var(--color-success-hover);
+}
+
+.button--no {
+  background-color: var(--color-white);
+  position: relative;
+}
+
+.button--no:hover {
   transform: translate(-200px, -200px);
 }

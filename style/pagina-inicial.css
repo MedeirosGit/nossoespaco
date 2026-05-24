@@ -1,8 +1,22 @@
 @charset "UTF-8";
 
+:root {
+  --color-primary: #80163e;
+  --color-primary-dark: #cc2364;
+  --color-secondary: #ff78ac;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --shadow-md: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  --shadow-sm: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  --transition-fast: 200ms;
+  --font-heading: 'cabecalho', cursive;
+  --font-body: 'corpo', cursive;
+}
+
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -17,141 +31,155 @@
 }
 
 body {
-  background-image: linear-gradient(to bottom, #ff78ac, #80163e);
+  background-image: linear-gradient(to bottom, var(--color-secondary), var(--color-primary));
+  min-height: 100vh;
 }
 
-header {
-  background-image: linear-gradient(to bottom, #cc2364, #80163e);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+.site-header {
+  background-image: linear-gradient(to bottom, var(--color-primary-dark), var(--color-primary));
+  box-shadow: var(--shadow-md);
   padding: 10px;
 }
 
-header h1 {
+.site-title {
   text-align: center;
-  color: white;
+  color: var(--color-white);
   font-weight: normal;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: var(--shadow-sm);
   font-size: 3em;
-  padding: 10px 0px 0px 0px;
+  padding: 10px 0 0;
 }
 
-header > h1 > a {
+.site-title a {
   text-decoration: none;
-  color: white;
-  font-family: cabecalho;
+  color: var(--color-white);
+  font-family: var(--font-heading);
 }
 
-.burguer {
+.menu-toggle {
   display: block;
-  text-align: center;
-}
-
-.burguer img {
+  margin: 10px auto;
+  background: transparent;
+  border: none;
   cursor: pointer;
-  background-color: #cc2364;
   padding: 5px;
+}
+
+.menu-toggle img {
+  background-color: var(--color-primary-dark);
   border-radius: 10px;
-  box-shadow: 1px 1px 2px black;
-  transition: 200ms;
+  box-shadow: var(--shadow-sm);
+  transition: background-color var(--transition-fast);
+  display: block;
 }
 
-.burguer img:hover {
-  background-color: #80163e;
+.menu-toggle img:hover {
+  background-color: var(--color-primary);
 }
 
-nav {
+.nav-menu {
   text-align: center;
   display: none;
-  background-color: #cc2364;
+  background-color: var(--color-primary-dark);
   border-radius: 10px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 5);
-  margin: 10px 0px;
-  transition: 200ms;
+  margin: 10px 0;
+  transition: background-color var(--transition-fast);
 }
 
-nav:hover {
-  background-color: #80163e;
+.nav-menu:hover {
+  background-color: var(--color-primary);
 }
 
-nav p {
+.nav-list {
+  list-style: none;
+}
+
+.nav-list li {
+  display: block;
+}
+
+.nav-list a {
   display: block;
   padding: 10px;
   font-size: 0.9em;
-  text-shadow: 1px 1px 2px black;
-}
-
-nav a {
+  text-shadow: var(--shadow-sm);
   text-decoration: none;
-  color: white;
+  color: var(--color-white);
   font-family: "Times New Roman", Times, serif;
-  transition: 200ms;
+  transition: background-color var(--transition-fast);
 }
 
-nav a:hover {
-  background-color: #cc2364;
+.nav-list a:hover {
+  background-color: var(--color-primary-dark);
   border-radius: 5px;
-  padding: 5px;
+  padding: 5px 10px;
 }
 
-main {
+.content {
   min-width: 300px;
   max-width: 600px;
-  background-color: white;
+  background-color: var(--color-white);
   margin: 10px auto;
   text-align: justify;
   padding: 15px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-md);
   border-radius: 10px;
 }
 
-main h1 {
+.page-heading,
+.content h1 {
   padding: 5px;
   background-image: linear-gradient(
     to right,
     hsla(337, 100%, 74%, 0.5),
     transparent
   );
-  margin: 10px 0px;
+  margin: 10px 0;
   border-radius: 5px;
-  text-shadow: 1px 1px 2px white;
-  font-family: corpo;
+  text-shadow: 1px 1px 2px var(--color-white);
+  font-family: var(--font-body);
   font-size: 2em;
 }
 
-main abbr {
-  text-decoration: none;
-}
-
-main h2,
-main h3,
-main h4,
-main h5,
-main h6 {
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
   padding: 5px;
-  margin: 10px 0px;
+  margin: 10px 0;
   border-radius: 5px;
-  text-shadow: 1px 1px 2px white;
+  text-shadow: 1px 1px 2px var(--color-white);
 }
 
-main h2 {
+.content h2 {
   font-size: 1.5em;
 }
 
-main h3 {
+.content h3 {
   font-size: 1.17em;
 }
 
-main p {
+.content p {
   text-indent: 30px;
   font-size: 1em;
   line-height: 1.5em;
-  margin: 5px 0px 10px 0px;
+  margin: 5px 0 10px;
 }
 
-footer p {
-  color: white;
+.content abbr {
+  text-decoration: none;
+}
+
+.site-footer {
+  padding: 10px;
+}
+
+.site-footer p {
+  color: var(--color-white);
   padding: 5px;
   text-align: center;
   font-size: 0.9em;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: var(--shadow-sm);
 }
