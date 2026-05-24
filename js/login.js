@@ -1,23 +1,38 @@
-// Função para verificar o login
-function verificarLogin() {
-  // Obtendo os valores inseridos nos campos de login e senha
-  var username = document.getElementById("login").value;
-  var password = document.getElementById("senha").value;
+/**
+ * Controla a autenticação na página de login
+ * Verifica as credenciais e redireciona para a página inicial se válidas
+ */
 
-  // Verificando se o nome de usuário e a senha estão corretos
-  if (
-    (username === "Wendell" || username === "Hellen") &&
-    password === "2410"
-  ) {
-    // Redirecionando o usuário para outro site após o login bem-sucedido
-    window.location.href = "../html/pagina-inicial.html"; // Substitua com o URL desejado
-  } else {
-    alert("Nome de usuário ou senha incorretos. Tente novamente.");
+(function() {
+  'use strict';
+
+  const VALID_USERS = ['Wendell', 'Hellen'];
+  const VALID_PASSWORD = '2410';
+  const REDIRECT_URL = '../html/pagina-inicial.html';
+
+  const loginForm = document.getElementById('login-form');
+  const loginInput = document.getElementById('login');
+  const passwordInput = document.getElementById('senha');
+
+  function validateCredentials(username, password) {
+    return VALID_USERS.includes(username) && password === VALID_PASSWORD;
   }
 
-  // Evitar que o formulário seja enviado e a página recarregada
-  event.preventDefault();
-}
+  function handleLogin(event) {
+    event.preventDefault();
 
-// Adicionando um evento de clique ao botão 'Entrar' para chamar a função verificarLogin()
-document.getElementById("entrar").addEventListener("click", verificarLogin);
+    const username = loginInput.value.trim();
+    const password = passwordInput.value;
+
+    if (validateCredentials(username, password)) {
+      window.location.href = REDIRECT_URL;
+    } else {
+      alert('Nome de usuário ou senha incorretos. Tente novamente.');
+      loginInput.focus();
+    }
+  }
+
+  if (loginForm) {
+    loginForm.addEventListener('submit', handleLogin);
+  }
+})();

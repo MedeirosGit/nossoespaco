@@ -12,26 +12,15 @@
     <link rel="stylesheet" href="../style/index.css" />
   </head>
   <body>
-    <main>
-      <h1 id="titulo">Aceita viver comigo pelo resto de nossas vidas?</h1>
-      <p id="contador"></p>
-      <section>
-        <button onclick="mudarTexto()" class="botaosim">Sim</button>
-        <button class="botaonao">Não</button>
+    <main class="container">
+      <h1 class="question-title">Aceita viver comigo pelo resto de nossas vidas?</h1>
+      <p class="response-message"></p>
+      <section class="buttons-container">
+        <button class="button button--yes">Sim</button>
+        <button class="button button--no">Não</button>
       </section>
     </main>
 
-    <script>
-      function mudarTexto() {
-        document.getElementById("titulo").innerHTML =
-          "Você tomou a decisão correta";
-        document.getElementById("contador").innerHTML =
-          "Seja bem-vinda ao nosso site, amor";
-        setTimeout(function () {
-          window.location.href = "login.html";
-        }, 3000);
-      }
-    </script>
+    <script src="../js/index.js"></script>
   </body>
-  <script src="../js/pagina-inicial.js"></script>
 </html>

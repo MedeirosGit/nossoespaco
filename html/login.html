@@ -14,32 +14,33 @@
 
   <body>
     <main class="container">
-      <h1>Log-in</h1>
-      <form id="login-form">
-        <div class="input-container">
+      <h1 class="page-title">Log-in</h1>
+      <form id="login-form" class="login-form">
+        <div class="input-group">
           <label for="login" class="input-label">Nome:</label>
           <input
             type="text"
             id="login"
-            class="input"
+            class="input-field"
             placeholder="Digite o seu nome"
             required
+            autocomplete="username"
           />
         </div>
-        <div class="input-container">
+        <div class="input-group">
           <label for="senha" class="input-label">Senha:</label>
           <input
             type="password"
             id="senha"
-            class="input"
+            class="input-field"
             placeholder="Digite a nossa senha"
             required
+            autocomplete="current-password"
           />
         </div>
-        <input type="submit" id="entrar" class="button" value="Entrar" />
+        <button type="submit" class="button button--submit">Entrar</button>
       </form>
     </main>
     <script src="../js/login.js"></script>
   </body>
-  <script src="../js/pagina-inicial.js"></script>
 </html>
