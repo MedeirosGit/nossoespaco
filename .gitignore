@@ -1,1 +1,105 @@
-(js/index.js, js/menu.js, html/biblioteca.html, html/cinema.html, html/galeria.html, html/index.html, html/login.html, html/pagina-inicial.html, js/login.js, style/index.css, style/login.css, style/pagina-inicial.css)
+```gitignore
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
+*.class
+*.exe
+*.dll
+*.so
+*.a
+*.out
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+.env
+.env.local
+.env.*
+
+# Build directories
+dist/
+build/
+target/
+*.log
+*.tmp
+*.swp
+
+# Editors
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# Python specific
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg-info/
+.eggs/
+
+# Compressed files
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
+
+# Gradle
+.gradle/
+
+# MyPy
+.mypy_cache/
+
+# PyTest
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.temp
+*~
+```
+
+Wait, I need to reconsider this. Looking at the file changes again - they are only HTML and CSS files, which are source files, not build artifacts or dependencies. According to rule #6, if the changes contain only source/config files and no build artifacts, dependencies, or temp files, I should output an empty .gitignore.
+
+The changes are:
+- html/biblioteca.html
+- html/cinema.html  
+- html/galeria.html
+- html/pagina-inicial.html
+- style/pagina-inicial.css
+
+These are all source files (.html, .css), so no .gitignore content is needed.
+
+```gitignore
+
+```

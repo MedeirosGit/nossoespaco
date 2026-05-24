@@ -39,6 +39,80 @@ body {
   background-image: linear-gradient(to bottom, var(--color-primary-dark), var(--color-primary));
   box-shadow: var(--shadow-md);
   padding: 10px;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Sidebar Menu - Hover na esquerda */
+.sidebar-trigger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100vh;
+  z-index: 998;
+  background: transparent;
+  cursor: pointer;
+}
+
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, var(--color-primary-dark), var(--color-primary));
+  box-shadow: var(--shadow-md);
+  z-index: 999;
+  transition: left var(--transition-fast) ease;
+  padding: 60px 20px 20px;
+  overflow-y: auto;
+}
+
+.sidebar-menu:hover,
+.sidebar-trigger:hover + .sidebar-menu {
+  left: 0;
+}
+
+.sidebar-menu .nav-list {
+  list-style: none;
+}
+
+.sidebar-menu .nav-list li {
+  margin-bottom: 15px;
+}
+
+.sidebar-menu .nav-list a {
+  display: block;
+  padding: 12px 15px;
+  font-size: 1.1em;
+  text-shadow: var(--shadow-sm);
+  text-decoration: none;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  border-radius: 8px;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.sidebar-menu .nav-list a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(10px);
+}
+
+/* Esconder menu antigo em telas grandes */
+@media (min-width: 769px) {
+  .menu-toggle,
+  .nav-menu:not(.sidebar-menu) {
+    display: none;
+  }
+}
+
+/* Em telas menores, manter o menu hamburguer */
+@media (max-width: 768px) {
+  .sidebar-trigger,
+  .sidebar-menu {
+    display: none;
+  }
 }
 
 .site-title {
